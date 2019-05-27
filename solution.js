@@ -4,14 +4,13 @@ const Truck = require('./modules/Truck');
 
 //Scenario: 1 truck with 2 containers 
 
-//creating array beers
 const beers = [
-    new Beer('Pilsner', 4, 6),
-    new Beer('IPA', 5, 6),
-    new Beer('Lager', 4, 7), 
-    new Beer('Stout', 6, 8), 
-    new Beer('Wheat Beer', 3, 5), 
-    new Beer('Pale Ale', 4, 6)
+    Beer.create('Pilsner'),
+    Beer.create('IPA'),
+    Beer.create('Lager'), 
+    Beer.create('Stout'), 
+    Beer.create('Wheat Beer'), 
+    Beer.create('Pale Ale')
 ];
 
 //creating container1
@@ -24,7 +23,7 @@ for (let value of iterator) {
 }
 
 console.log(container1);
-console.log(container1.checkTemperature());
+container1.checkTemperature();
 
 //creating container2
 const container2 = new Container(5);
@@ -43,6 +42,6 @@ truck1.addContainer(container1);
 truck1.addContainer(container2);
 
 console.log(container2);
-console.log(container2.checkTemperature());
+container2.checkTemperature();
 
 console.log(truck1);
