@@ -21,12 +21,4 @@ class Beer{
         this.minDegree = minDegree;
         this.maxDegree = maxDegree;
     }
-
-    getMinDegree(){
-        return this.minDegree;
-    }
-
-    getMaxDegree(){
-        return this.minDegree;
-    }
 }

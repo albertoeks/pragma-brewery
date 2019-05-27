@@ -8,17 +8,13 @@ module.exports = class Container{
         this.beers.push(beer);
     }
 
-    checkTemperature(){
-        let iterator = this.beers.values();
-        for (let beer of iterator) {
-            if(beer.minDegree > this.thermometer){
-                console.log('temperature below');
-            }else if(beer.maxDegree < this.thermometer){
-                console.log('temperature above');
-            } else{
-                console.log('temperature ok');
-            }
+    checkTemperature(minDegree, maxDegree){
+        if(minDegree > this.thermometer){
+            return 'temperature below';
+        }else if(maxDegree < this.thermometer){
+            return 'temperature above';
+        } else{
+            return 'temperature ok';
         }
-
     }
 }

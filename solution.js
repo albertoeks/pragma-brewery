@@ -20,10 +20,10 @@ const container1 = new Container(3);
 const iterator = beers.values();
 for (let value of iterator) {
     container1.addBeer(value);
+    console.log(container1.checkTemperature(value.minDegree, value.maxDegree));
 }
 
 console.log(container1);
-container1.checkTemperature();
 
 //creating container2
 const container2 = new Container(5);
@@ -32,6 +32,7 @@ const container2 = new Container(5);
 const iterator2 = beers.values();
 for (let value of iterator2) {
     container2.addBeer(value);
+    console.log(container2.checkTemperature(value.minDegree, value.maxDegree));
 }
 
 //creating truck
@@ -42,6 +43,5 @@ truck1.addContainer(container1);
 truck1.addContainer(container2);
 
 console.log(container2);
-container2.checkTemperature();
 
 console.log(truck1);
