@@ -21,4 +21,8 @@ class Beer{
         this.minDegree = minDegree;
         this.maxDegree = maxDegree;
     }
+
+    getSummary(){
+        return `Beer ${this.name} -> refrigeration between ${this.minDegree}°C - ${this.maxDegree}°C`;
+    }
 }

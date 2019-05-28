@@ -10,11 +10,21 @@ module.exports = class Container{
 
     checkTemperature(minDegree, maxDegree){
         if(minDegree > this.thermometer){
-            return 'temperature below';
+            return 'low temperature';
         }else if(maxDegree < this.thermometer){
-            return 'temperature above';
+            return 'high temperature';
         } else{
             return 'temperature ok';
         }
+    }
+
+    getSummary(){
+        let summary = "";
+        let iterator = this.beers.values();
+        for (let value of iterator) {
+            summary += `${value.getSummary()} | Status: ${this.checkTemperature(value.minDegree, value.maxDegree)}\n`;
+            //summary += value.getSummary() + '\n';
+        }
+        return `Container temperature: ${this.thermometer}°C \nBeers:\n${summary}`;
     }
 }

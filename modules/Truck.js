@@ -8,4 +8,13 @@ module.exports = class Truck{
         this.containers.push(container);
     }
 
+    getSummary(){
+        let summary = "";
+        let iterator = this.containers.values();
+        for (let value of iterator) {
+            summary += value.getSummary() + '\n';
+        }
+        return `\nTruck with ${this.qntContainer} containers \n${summary}`;
+    }
+
 }

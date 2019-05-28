@@ -30,10 +30,10 @@ for (let value of iterator) {
 
 expect(container1).to.have.property('beers').with.lengthOf(6);
 expect(container1.checkTemperature(1,4)).to.equal('temperature ok');
-expect(container1.checkTemperature(1,2)).to.equal('temperature above');
+expect(container1.checkTemperature(1,2)).to.equal('high temperature');
 expect(container1.checkTemperature(2,5)).to.equal('temperature ok');
-expect(container1.checkTemperature(0,0)).to.equal('temperature above');
-expect(container1.checkTemperature(4,5)).to.equal('temperature below');
+expect(container1.checkTemperature(0,0)).to.equal('high temperature');
+expect(container1.checkTemperature(4,5)).to.equal('low temperature');
 expect(container1.checkTemperature(3,3)).to.equal('temperature ok');
 
 //creating container2
