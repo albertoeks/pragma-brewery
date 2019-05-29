@@ -1,6 +1,6 @@
-const Beer = require('./modules/Beer');
-const Container = require('./modules/Container');
-const Truck = require('./modules/Truck');
+const Beer = require('../modules/Beer');
+const Container = require('../modules/Container');
+const Truck = require('../modules/Truck');
 
 //Scenario: 1 truck with 2 containers 
 
