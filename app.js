@@ -26,6 +26,7 @@ function readContainers(containerCount, curr = 0) {
     }
 
     readline.question("Set thermometer container " + (curr + 1) + ": ", function (answer2) {
+      if(isNaN(answer2)) throw `${answer2}: is not a number`;
       container = new Container(answer2);
       const iterator = beers.values();
       for (let value of iterator) {
@@ -37,6 +38,8 @@ function readContainers(containerCount, curr = 0) {
 }
 
 readline.question("How many containers? ", function (answer1) {
+  if(isNaN(answer1)) throw `${answer1}: is not a number`;
+  if(answer1 < 0) throw `only value greater than zero`;
   truck = new Truck(answer1);
   readContainers(parseInt(answer1));
 });
